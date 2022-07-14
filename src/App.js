@@ -6,6 +6,7 @@ import FunctionalThings from './pages/FunctionalThings/FunctionalThings'
 import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SIllyThings'
 import Landing from './pages/Landing/Landing'
+import CocosThings from './pages/CocosThings/CocosThings'
 import InstrumentalThings from './pages/InstrumentalThings/InstrumentalThings'
 
 const App = () => {
@@ -129,11 +130,19 @@ const App = () => {
       attributes: ["efficient", "reusability", "not a taco", "beautiful"],
     },
   ])
+  
+  const [cocosThings, setCocosThings] = useState([
+    {
+      name: "POTATO",
+      image: "https://i.pinimg.com/564x/05/03/c3/0503c365c63048d3f596f8e5a4fc27ce.jpg",  
+      attributes: ["couch", "crispy", "baked", "mashed"],
+    },
+  ])
 
   const [jonathansThings, setJonathansThings] = useState([
     {
       name: "instruments",
-      image: "https://imgs.xkcd.com/comics/intstruments.png",  
+      image: "https://imgs.xkcd.com/intstruments.png",  
       attributes: ["not tuned", "expensive", "very fun", "beautiful also"],
     },
   ])
@@ -157,6 +166,10 @@ const App = () => {
       <Route
         path="/the-silly-things"
         element={<SillyThings things={huntersThings} />}
+      />
+      <Route
+        path="/coco-things"
+        element={<CocosThings things={cocosThings} />}
       />
       <Route
         path="/the-instrumental-things"
