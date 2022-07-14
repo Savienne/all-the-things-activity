@@ -7,6 +7,7 @@ import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SIllyThings'
 import Landing from './pages/Landing/Landing'
 import CocosThings from './pages/CocosThings/CocosThings'
+import InstrumentalThings from './pages/InstrumentalThings/InstrumentalThings'
 
 const App = () => {
   const [shahzadsThings, setShazadsThings] = useState([
@@ -137,6 +138,15 @@ const App = () => {
       attributes: ["couch", "crispy", "baked", "mashed"],
     },
   ])
+
+  const [jonathansThings, setJonathansThings] = useState([
+    {
+      name: "instruments",
+      image: "https://imgs.xkcd.com/intstruments.png",  
+      attributes: ["not tuned", "expensive", "very fun", "beautiful also"],
+    },
+  ])
+
   return (
     <Routes>
       {/* All the <Route> components should live here */}
@@ -160,6 +170,10 @@ const App = () => {
       <Route
         path="/coco-things"
         element={<CocosThings things={cocosThings} />}
+      />
+      <Route
+        path="/the-instrumental-things"
+        element={<InstrumentalThings things={jonathansThings} />}
       />
     </Routes>
   )
